@@ -1,0 +1,24 @@
+
+{% extends 'navigate.html' %}
+{% block body %}
+  <div class='row mt-5'>
+    <div class='col-4 mx-auto'>
+      <h4 class='text-center'>User Registration</h4><hr>
+      <form action="{{url_for('reg')}}" method='post'>
+        <div class='form-group'>
+          <label for="uname">Username</label>
+          <input type='text' id="unmae"name='uname' required class='form-control'>  
+        </div>
+        <div class='form-group'>
+          <label for="email">Email</label>
+          <input type='email' id="email" name='email' required class='form-control'>  
+        </div>
+        <div class='form-group'>
+          <label for="password">Password</label>
+          <input type='password' id="password"name='password' required class='form-control'>  
+        </div>
+        <input type='submit' name='submit' value='Submit' class='btn btn-success'>
+      </form>
+    </div>
+  </div>
+{% endblock %}

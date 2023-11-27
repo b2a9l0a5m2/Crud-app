@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'navigate.html' %}
+{% block body %}
+<head>
+    <title>CRUD APP</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    
+</head>
+<body>
+    <h2>Update Employees Details</h2>
+        <form action='' method="post">
+            <label>Name:</label>
+            <input type="text" name="name" value="{{datas.NAME}}" required>
+            <label>Age:</label>
+            <input type="text" name="age" value="{{datas.AGE}}" required>
+            <label>City:</label>
+            <input type="text" name="city" value="{{datas.CITY}}" required>
+            <input type="submit" value="Update Details">
+            <a href="/home">Back</a> 
+
+        </form>
+    
+</body>
+{% endblock %}
+</html>  
